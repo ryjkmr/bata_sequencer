@@ -1,5 +1,10 @@
 'use strict';
 
+//演奏が始まらない現象を防ぐおまじない？
+document.documentElement.addEventListener('mousedown', () => {
+  if (Tone.context.state !== 'running') Tone.context.resume();
+});
+
 Tone.Transport.bpm.value = 120;//テンポ設定
 Tone.Transport.scheduleRepeat(repeat, '8n');//"8n"が来る度に'repeat'関数が呼び出される
 

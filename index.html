@@ -6,9 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bata Drum Sequencer</title>
+  <style type="text/css">
+    * {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+    }
+
+    html {
+      touch-action: manipulation;
+    }
+  </style>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/0.12.63/Tone.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/0.12.63/Tone.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 </head>
 
@@ -19,7 +33,7 @@
     <input type="button" value="start" class="startBtn btn-square" />
     <input type="button" value="stop" class="stopBtn mgr-10 btn-square" />
     <form action="#" style="display:inline;">
-      <span class="">SPEED:</span><input type="range" value="120" min="50" max="350" step="1" id="tempo_slider"
+      <span class="">Tempo:</span><input type="range" value="120" min="50" max="350" step="1" id="tempo_slider"
         class="mgr-10"><output id="tempo_disp">120</output>
     </form>
     <div id="score_table" class="score_table"></div>
@@ -46,7 +60,7 @@
       <li>ChaCha:チャチャロカフンのサンプルデータに設定します</li>
       <li>最後にstopボタンを押したときのデータがブラウザに残り、次回のアクセスやリロード時に再現されます</li>
     </ul>
-    
+
     <p>
       注意事項など<br>
       使用しているサンプラー音源は作者が自分で演奏・録音したものです<br>
