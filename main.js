@@ -26,7 +26,7 @@ const soundsUrlList = [
 const sounds = soundsUrlList.map(url => new Tone.Sampler({ C4: SOUND_FILE_DIR + url }).toMaster());//Tone.jsにサンプラー音源をセット。最初にやらないとエラーになる
 
 const SCORE_DATA = [ //楽器と譜面をセットにしたデータ
-    //音源ファイル名も含めることで、色んな楽器に対応させる予定だったが、Tone.jsのバッファエラーが出てうまくいかないので、今はバタ専用仕様。ファイル名も利用されていない
+  //音源ファイル名も含めることで、色んな楽器に対応させる予定だったが、Tone.jsのバッファエラーが出てうまくいかないので、今はバタ専用仕様。ファイル名も利用されていない
   {
     "instrumentName": "clave", "sounds": [
       { "name": "clave", "notes": [true, false, false, true, false, false, false, true, false, false, true, false, true, false, false, false], "filename": "clave.wav" }]
@@ -386,4 +386,5 @@ function eraseCheckeboxChecked(target) { //セル数の増減処理を楽にす�
     note_inputs[i].checked = note_backup[i];
   }
 }
+
 

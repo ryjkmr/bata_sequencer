@@ -1,7 +1,8 @@
-table {
+/* table {
 	width: 95%;
-}
+} */
 
+/* 
 body {
 	font-family: sans-serif;
 }
@@ -14,10 +15,6 @@ p {
 	font-size: smaller;
 }
 
-table, td, th {
-	border: 1px solid #595959;
-	border-collapse: collapse;
-}
 
 td, th {
 	padding: 3px;
@@ -26,6 +23,13 @@ td, th {
 	text-align: center;
 	white-space: nowrap;
 }
+ */
+
+table, td, th {
+	border: 2px solid #595959;
+	/* border-collapse: collapse; */
+}
+
 
 th {
 	background: #f0e6cc;
@@ -55,18 +59,19 @@ tr .note_cell:nth-last-of-type(odd) {
 	margin-right: 10px;
 }
 
-.btn-square {
+/* .btn-square {
 	display: inline-block;
 	padding: 0.5em 1em;
 	text-decoration: none;
 	background: #668ad8;
-	/*ボタン色*/
+	
 	color: #FFF;
 	border-bottom: solid 4px #627295;
 	border-radius: 1px;
 	width: 60px;
 	margin-bottom: 10px;
 }
+ */
 
 #tempo_disp {
 	width: 30px;
@@ -78,7 +83,6 @@ tr .note_cell:nth-last-of-type(odd) {
 }
 
 /*
-
 
 .table_color td:nth-child(odd) {
 	background:#EAF6FD;

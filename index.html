@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bata Drum Sequencer</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <style type="text/css">
     * {
       user-select: none;
@@ -27,47 +30,59 @@
 </head>
 
 <body>
-  <h2>Bata Drum Sequencer ver.0.1 by ryjkmr</h2>
-  <p><a href="https://github.com/ryjkmr/bata_sequencer/">https://github.com/ryjkmr/bata_sequencer/</a></p>
-  <div class="player">
-    <input type="button" value="start" class="startBtn btn-square" />
-    <input type="button" value="stop" class="stopBtn mgr-10 btn-square" />
+  <div class="container-fluid">
+
+    <h2>Bata Drum Sequencer</h2>
+    <p> by ryjkmr <a href="https://github.com/ryjkmr/bata_sequencer/">source
+        code:https://github.com/ryjkmr/bata_sequencer/</a></p>
+  </div>
+  <div class="player container-fluid">
+    <input type="button" value="start" class="btn  btn-primary startBtn btn-square" />
+    <input type="button" value="stop" class="btn  btn-danger stopBtn mgr-10 btn-square" />
     <form action="#" style="display:inline;">
       <span class="">Tempo:</span><input type="range" value="120" min="50" max="350" step="1" id="tempo_slider"
         class="mgr-10"><output id="tempo_disp">120</output>
     </form>
-    <div id="score_table" class="score_table"></div>
+    <br><br>
+    <div id="score_table" class="score_tablec table"></div>
     <div id="debug"></div>
-    <input type="button" value="increase cell" class="increaseCellBtn" />
-    <input type="button" value="decrease cell" class="decreaseCellBtn" />
-    <input type="button" value="clear all" class="clearBtn" />
-    <input type="button" value="ChaCha" class="ChaChaBtn" />
+
+    <input type="button" value="increase cell" class="btn  btn-secondary increaseCellBtn" />
+    <input type="button" value="decrease cell" class="btn  btn-secondary decreaseCellBtn" />
+    <input type="button" value="clear all" class="btn  btn-secondary clearBtn" />
+    <input type="button" value="ChaCha" class="btn  btn-success ChaChaBtn" />
   </div>
-  <div>
-    <ul>バタドラムシーケンサー
+  <div class="container-fluid">
+    <br>
+    <ul>概要
       <li>バタドラムの演奏をシミュレートしたステップシーケンサーです</li>
       <li>リズムパターンの練習・研究・教育などにお使い下さい</li>
-      <li>チェックが入っているカウントで音が鳴ります</li>
+      <li>Startすると、チェックマークが入っているところで音が鳴ります</li>
       <li>ループのカウント数を2〜48の間で自由に設定できるので、何拍子にも対応可能です</li>
       <li>リズムパターンの保存・共有機能は開発中です。とりあえずスクショとかでなんとかしてください。</li>
     </ul>
     <ul>使い方
       <li>startで再生、stopで停止</li>
       <li>パート名に付いているチェックを外すとそのパートだけミュートできます</li>
-      <li>increase cell:ループのカウント数を増やします</li>
-      <li>decrease cell:ループのカウント数を減らします</li>
-      <li>clear all:すべてのチェックを外して空にします</li>
+      <li>increase cell:ループを1カウント長くします</li>
+      <li>decrease cell:ループを1カウント短くします</li>
+      <li>clear all:すべてのチェックマークを外して空にします</li>
       <li>ChaCha:チャチャロカフンのサンプルデータに設定します</li>
-      <li>最後にstopボタンを押したときのデータがブラウザに残り、次回のアクセスやリロード時に再現されます</li>
+      <li>最後にstopボタンを押したときのデータがブラウザに残り、次回のアクセスや再読み込み時に再現されます</li>
     </ul>
-
-    <p>
-      注意事項など<br>
-      使用しているサンプラー音源は作者が自分で演奏・録音したものです<br>
-      本アプリで作ったパターンや音楽は、無償・商用を問わず自由に配布して構いません<br>
-      ただし、楽器音源単体の再配布は禁止します<br>
-      本アプリの利用によってユーザーに生じたあらゆる損害について、作者は一切の責任を負いません。</p>
+    <ul>その他
+      <li>本アプリで作ったパターンや音楽は、無償・商用を問わず自由に配布して構いません</li>
+      <li>本アプリの利用によってユーザーに生じたあらゆる損害について、作者は一切の責任を負いません</li>
+    </ul>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
   <script src="main.js"></script>
 
 </body>
