@@ -79,7 +79,7 @@ $(document).ready(function () {
   function setStartBtnAction() {
     $('.startBtn').click(function (e) {
       tableToPlay = $(this).parent().find('table')[0];//同じdiv内にあるテーブルを演奏対象オブジェクトにセット
-      $.cookie('last_played_score', JSON.stringify(getScoreDataFromScoreTable(tableToPlay)));
+      //$.cookie('last_played_score', JSON.stringify(getScoreDataFromScoreTable(tableToPlay)));
       Tone.Transport.seconds = 0;
       Tone.Transport.start();
       $(this).val('pause');
@@ -171,7 +171,7 @@ $(document).ready(function () {
   });
 
   $('.clearBtn').click(function (e) {
-    stop();
+    stop(this);
     resetStartBtn(this);
     if (window.confirm('全てのデータをクリアします')) {
       const tableToClear = $(this).parent().find('table')[0];
@@ -183,7 +183,7 @@ $(document).ready(function () {
   });
 
   $('.ChaChaBtn').click(function (e) {
-    stop();
+    stop(this);
     resetStartBtn(this);
     if (window.confirm('全てのデータをクリアしてチャチャロカフンに設定します')) {
       const tableToReset = $(this).parent().find('table')[0];
@@ -366,11 +366,12 @@ function repeat(time) {
 }
 
 function stop(that) {
+  tableToPlay = $(that).parent().find('table')[0];//同じdiv内にあるテーブルを演奏対象オブジェクトにセット
+  $.cookie('last_played_score', JSON.stringify(getScoreDataFromScoreTable(tableToPlay)));
   Tone.Transport.stop();
   Tone.Transport.cancel();
   clearColorOfAllCells();
   indexOfPlayingCell = 0;
-  $.cookie('last_played_score', JSON.stringify(getScoreDataFromScoreTable(tableToPlay)));
 }
 
 

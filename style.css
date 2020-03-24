@@ -1,6 +1,7 @@
-/* table {
+ table {
 	width: 95%;
-} */
+	margin-bottom: 10px;
+} 
 
 /* 
 body {
@@ -14,7 +15,7 @@ li {
 p {
 	font-size: smaller;
 }
-
+*/
 
 td, th {
 	padding: 3px;
@@ -23,7 +24,7 @@ td, th {
 	text-align: center;
 	white-space: nowrap;
 }
- */
+ 
 
 table, td, th {
 	border: 2px solid #595959;
