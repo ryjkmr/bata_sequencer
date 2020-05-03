@@ -1,7 +1,7 @@
 # bata_sequencer
 bata drum sequencer using Web Audio API and Tone.js
 
-Tone.jsライブラリ経由でWebAudioAPIを利用したドラムシーケンサーです。<br>
+Tone.jsライブラリ経由でWeb Audio APIを利用したドラムシーケンサーです。<br>
 リズムパターンの練習・研究・教育を目的に
 キューバのBata Drumという太鼓のアンサンブルをシミュレートしています。<br>
 [Bata Sequencer](https://ryjkmr.github.io/bata_sequencer/)<br>
