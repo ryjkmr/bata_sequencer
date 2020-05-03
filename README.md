@@ -1,5 +1,5 @@
 # bata_sequencer
-drum sequencer using Web Audio API and Tone.js
+bata drum sequencer using Web Audio API and Tone.js
 
 Tone.jsライブラリ経由でWebAudioAPIを利用したドラムシーケンサーです。<br>
 リズムパターンの練習・研究・教育を目的に
